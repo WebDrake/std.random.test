@@ -1,0 +1,4 @@
+This is a small and currently very simplistic test suite to help check for
+obvious errors in D's std.random Phobos module.  The main focus is on
+RandomCover and RandomSample, to ensure they select elements of their input
+in the correct proportions.
