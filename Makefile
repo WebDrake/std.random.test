@@ -1,15 +1,12 @@
 DC = dmd
 DFLAGS = -debug -unittest
 LIBSRC = test/*.d
-PROGS = smallsample largesample
+PROGS = smallsample largesample uniform
 
 all: $(PROGS)
 
-smallsample: smallsample.d $(LIBSRC)
-	$(DC) $(DFLAGS) -of$@ $^
-
-largesample: largesample.d $(LIBSRC)
-	$(DC) $(DFLAGS) -of$@ $^
+%: %.d
+	$(DC) $(DFLAGS) -of$* $*.d $(LIBSRC)
 
 .PHONY: clean
 
