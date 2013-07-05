@@ -1,9 +1,6 @@
 module test.sample;
 
-import std.algorithm, std.conv, std.datetime, std.random, std.range, std.stdio, std.typetuple;
-
-alias PseudoRngTypes = TypeTuple!(MinstdRand0, MinstdRand, Mt19937, Xorshift32, Xorshift64,
-                                  Xorshift96, Xorshift128, Xorshift160, Xorshift192);
+import std.algorithm, std.conv, std.datetime, std.random, std.range, std.stdio;
 
 void sampleTest(Rng = void)(size_t total, size_t n, size_t repetitions, bool verbose = true)
     if(isUniformRNG!Rng || is(Rng == void))

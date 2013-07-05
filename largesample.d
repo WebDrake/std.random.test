@@ -1,5 +1,5 @@
 import std.random, std.stdio;
-import test.sample;
+import test.rng, test.sample;
 
 void main()
 {
